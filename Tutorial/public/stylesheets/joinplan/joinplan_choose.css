@@ -1,0 +1,19 @@
+table{
+    border-collapse: collapse;
+    width: 1250px; 	
+    /*自動斷行*/
+    word-wrap: break-word;
+    table-layout: fixed;
+}
+
+button {
+    border: enable;
+    color: rgb(151, 32, 32);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

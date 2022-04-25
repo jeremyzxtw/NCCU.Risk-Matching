@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Program Upload</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    // CSS 上面 top nav bar------------------------------------------------------------- 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/top_nav_bar.css">
+    // CSS 左邊 left nav bar------------------------------------------------------------
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/left_nav_bar.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/program/program_pause/program_pause.css">
+
+    //for dialog
+    <link rel="stylesheet" type="text/css" href="/stylesheets/program/jquery-ui.css">
+
+</head>
+
+<body>
+    //--上面nav bar------------------
+    include ../../includes/top_nav_bar.pug
+    //---------------------------------------------------------------
+
+    //--左邊sidenav bar----------------------------------------------
+    include ../../includes/left_nav_bar.pug
+    //---------------------------------------------------------------
+
+    //--中間內容----------------------------------------------
+    <div class="page_content">
+        <div class="body_head">
+            <div class="body_head_title">
+                |程式交易專區(Program Trading)
+            </div>
+        </div>
+        //中間內容
+        <div class="body_content"> 
+            //中間容器
+            <div class="container">
+                //容器左半邊
+                <div class="left_container">
+                    <a href="/program">
+                        //左側每一欄
+                        <div class="navigate_outer" id="overview">
+                            //span處理文字
+                            <span class="navigate_text">
+                                |程式合約總覽
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_upload">
+                        <div class="navigate_outer" id="upload">
+                            <span class="navigate_text">
+                                |程式碼上傳
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_view">
+                        <div class="navigate_outer" id="view">
+                            <span class="navigate_text">
+                                |程式碼瀏覽
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/deploy_contract">
+                        <div class="navigate_outer" id="deploy">
+                            <span class="navigate_text">
+                                |智能合約部署
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/contract_activation">
+                        <div class="navigate_outer" id="activate">
+                            <span class="navigate_text">
+                                |智能合約初始化
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_pause">
+                        <div class="navigate_outer" id="pause">
+                            <span class="navigate_text">
+                                |暫停智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_continue">
+                        <div class="navigate_outer" id="continue">
+                            <span class="navigate_text">
+                                |繼續智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/contract_delete">
+                        <div class="navigate_outer" id="delete">
+                            <span class="navigate_text">
+                                |終止(刪除)智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                </div>
+                //容器右半邊
+                <div class="right_container">
+                    <div class="right_container_content">
+                        //-------第一部分--------------------------------------------------------
+                        <form id="main_form" action="/program/processing_program_pause" method="post">
+                            <div class="right_container_title">
+                                <h3 class="title_text">
+                                    |合約資料
+                                </h3>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |您的錢包地址
+                                    </dd>
+                                    <dd class="text_box_content" id="wallet_address">
+                                        |#{wallet_address}
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |剩餘代幣數量
+                                    </dd>
+                                    <dd class="text_box_content" id="token">
+                                        |#{tokens} Tokens
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |您的程式合約地址
+                                    </dd>
+                                    <dd class="text_box_content" id="contract_address">
+                                        |#{contract_address}
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |暫停合約手續費
+                                    </dd>
+                                    <dd class="text_box_content" id="pause_fee">
+                                        |0 Tokens
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dd class="text_box_content" id="warn_not_enough_token_1">
+                                        |#{warn_not_enough_token}
+                                    </dd>
+                                </dl>  
+                            </div>
+                            <div class="line">
+                            </div>
+                            <div class="right_container_title">
+                                <h3 class="title_text">
+                                    |暫停智能合約(inActive)
+                                </h3>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |警告
+                                    </dd>
+                                    <dd class="text_box_content" id="warn">
+                                        |此舉動將暫停智能合約，需先等待投資者結束所有投資
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="line">
+                            </div>
+                            <div class="right_container_title">
+                                <h3 class="title_text">
+                                    |簽章資訊
+                                </h3>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |Token Address
+                                    </dd>
+                                    <dd class="text_box_content" id="contract_addr">
+                                        <input type="text" id="contract_address" name="contract_address" value="0x72682d0d54c7ED7cdDdAa66E6DD7171f2B9c626C" style="width:326px" required>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |TransferSig
+                                    </dd>
+                                    <dd class="text_box_content" id="transfersignature">
+                                        <input type="text" id="transfersig" name="transfersig" value="0x48664c16" style="width:100px" required>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |To
+                                    </dd>
+                                    <dd class="text_box_content" id="to_addr">
+                                        <input type="text" id="to_address" name="to_address" value="0xD0A8800973cbEF2639EbF79c019c8a1611C7d810" style="width:326px" required>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |Value
+                                    </dd>
+                                    <dd class="text_box_content" id="val">
+                                        <input type="text" id="value" name="value" value="0" style="width:50px" required>
+                                        //下面也要改手續費數值
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |Fee
+                                    </dd>
+                                    <dd class="text_box_content" id="pay_fee">
+                                        <input type="text" id="fee" name="fee" value="0" style="width:50px" required>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |Nonce
+                                    </dd>
+                                    <dd class="text_box_content" id="nonce_text">
+                                        <input type="text" id="nonce" name="nonce" value="#{nonce}" style="width:50px" required>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |Control_Id
+                                    </dd>
+                                    <dd class="text_box_content" id="control_id_text">
+                                        <input type="text" id="control_id" name="control_id" value="1" style="width:50px" required>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="text_box">
+                                <dl>
+                                    <dd class="text_box_title">
+                                        |Signature
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dd class="text_box_content" id="sig">
+                                        <input type="text" id="signature" name="signature" style="width:640px" required>
+                                    </dd>
+                                    <dd class="text_box_content" id="warn_not_enough_token_2">
+                                        |#{warn_not_enough_token}
+                                    </dd>
+                                </dl>
+                            </div>
+                            <span id="icon_1">&#10112;</span>
+                            <button type="button" id="create_signature">Create Signature</button>
+
+                            //要傳入下一頁的資訊
+                        
+
+
+                            //實際上是傳這個，上面手續費(簽章)也要改
+                            <input type="hidden" id="cash" name="num_cash" value="0" required>
+                            <input type="hidden" id="date" name="date" required>
+                            <span id="icon_2">&#10113;</span>
+                            <button type="button" id="comfirm" disabled>確認暫停</button>
+                            //dialog
+                            <div id="comfirm_box">
+
+                                <fieldset>
+                                    <p class="validateTips">每筆投資手續費為 : 100 Tokens</p>
+                                    <p class="validateTips">請確認資訊，一旦送出後則不能更改</p>
+                                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                                </fieldset>
+
+                            </div>
+                            //
+                                if(tag==0)
+                                    <input id="submit" type="submit" value="確認部署">
+                                else
+                                    <input id="submit" type="submit" value="確認部署" disabled="disabled">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    <div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/program/abi.js" type="text/javascript"></script>
+
+    <script src="/javascripts/program/program_pause/program_pause.js" type="text/javascript"></script>
+    // Javascript 上面 top nav bar------------------------------------------------------------- 
+    <script src="/javascripts/includes/top_nav_bar.js" type="text/javascript"></script>
+    // Javascript 左邊 left nav bar------------------------------------------------------------
+    <script src="/javascripts/includes/left_nav_bar.js" type="text/javascript"></script>
+
+    //for dialog
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
+
+</body>
+
+</html> 

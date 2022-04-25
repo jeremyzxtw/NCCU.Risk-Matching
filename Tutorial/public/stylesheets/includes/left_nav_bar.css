@@ -1,0 +1,62 @@
+/* 左邊sidenav bar----------------------------------------------------- */
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */ /* 高度左邊滿 */
+    width: 0; /* 0 width - change this with JavaScript */ /* 一開始預設看不到 */
+    position: fixed; /* Stay in place */ /* 即便拉動卷軸也會固定位置 */
+    top: 0; /* Stay at the top */ /* 對齊上邊框 */
+    left: 0; /* 對齊左邊框 */
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */ /* 跟著水平拉軸出來 */
+    padding-top: 60px; /* Place content 60px from the top */ /* 文字離頂端距離 */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */ /* sidebar動畫速度 */
+    z-index: 11; /* Stay on top */
+}
+
+    /* The navigation menu links */
+    .sidenav a {
+        font-family: "Lato", sans-serif;
+        padding: 8px 8px 8px 32px; /*上右下左內距*/
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block; /*display:block - 區塊，元素會以區塊方式呈現  display:inline會同一行*/
+        transition: 0.3s; /*文字動化速度*/
+    }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1; /*滑鼠放上去的時候顏色*/
+        }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        /*margin-left: 50px;*/
+    }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#sidebaropen {
+    transition: margin-left .5s; /*3條槓往右/左移動速度*/
+    padding: 12px; /*3條槓位置*/
+    color: white;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)  */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}

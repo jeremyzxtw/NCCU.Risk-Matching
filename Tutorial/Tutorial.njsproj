@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Tutorial</Name>
+    <RootNamespace>Tutorial</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>daaa2c67-3e93-4668-95d2-835fbd7031d4</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="public\javascripts\index.js" />
+    <Compile Include="public\javascripts\register.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\register.js" />
+    <Content Include="package.json" />
+    <Content Include="public\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\fonts\FontAwesome.otf" />
+    <Content Include="public\images\banner.jpg" />
+    <Content Include="public\images\banner1.jpg" />
+    <Content Include="public\images\banner9.jpg" />
+    <Content Include="public\images\pic01.jpg" />
+    <Content Include="public\images\pic02.jpg" />
+    <Content Include="public\images\pic03.jpg" />
+    <Content Include="public\images\solidity.jpg" />
+    <Content Include="public\javascripts\accounting\accounting.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\accounting\transfer_token.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\joinplan\joinplan_certificate.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\currency_exchange\cash_to_tokens\confirm_cash_to_tokens.js" />
+    <Content Include="public\javascripts\currency_exchange\cash_to_tokens\receipt_cash_to_tokens.js" />
+    <Content Include="public\javascripts\currency_exchange\currency_exchange.js" />
+    <Content Include="public\javascripts\currency_exchange\tokens_to_cash\abi.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\currency_exchange\tokens_to_cash\confirm_tokens_to_cash.js" />
+    <Content Include="public\javascripts\currency_exchange\tokens_to_cash\jquery.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\currency_exchange\tokens_to_cash\processing_tokens_to_cash.js" />
+    <Content Include="public\javascripts\currency_exchange\tokens_to_cash\receipt_tokens_to_cash.js" />
+    <Content Include="public\javascripts\erc865\abi.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\erc865\bootstrap.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\erc865\bootstrap.min.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\erc865\erc865.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\erc865\jquery.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\joinplan\joinplan_do.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\newplan\newplan_result.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\style\html5shiv.js" />
+    <Content Include="public\javascripts\includes\left_nav_bar.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\includes\top_nav_bar.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\style\init.js" />
+    <Content Include="public\javascripts\joinplan\joinplan_choose.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\style\jquery.min.js" />
+    <Content Include="public\javascripts\login\login.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\logout\logout.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\newplan\newplan.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\repair\repair.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\repair\repair_result.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\repair\repair_wait.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\sign\sign.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\style\skel-layers.min.js" />
+    <Content Include="public\javascripts\style\skel.min.js" />
+    <Content Include="public\stylesheets\accounting\accounting.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\accounting\transfer_token.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\joinplan\joinplan_certificate.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\currency_exchange\cash_to_tokens\confirm_cash_to_tokens.css" />
+    <Content Include="public\stylesheets\currency_exchange\cash_to_tokens\receipt_cash_to_tokens.css" />
+    <Content Include="public\stylesheets\currency_exchange\currency_exchange.css" />
+    <Content Include="public\stylesheets\currency_exchange\tokens_to_cash\confirm_tokens_to_cash.css" />
+    <Content Include="public\stylesheets\currency_exchange\tokens_to_cash\processing_tokens_to_cash.css" />
+    <Content Include="public\stylesheets\currency_exchange\tokens_to_cash\receipt_tokens_to_cash.css" />
+    <Content Include="public\stylesheets\erc865\bootstrap.casual.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\erc865\bootstrap.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\erc865\bootstrap.min.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\stylesheets\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\stylesheets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\stylesheets\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\stylesheets\fonts\FontAwesome.otf" />
+    <Content Include="public\stylesheets\images\banner.jpg" />
+    <Content Include="public\stylesheets\images\banner1.jpg" />
+    <Content Include="public\stylesheets\images\banner9.jpg" />
+    <Content Include="public\stylesheets\images\pic01.jpg" />
+    <Content Include="public\stylesheets\images\pic02.jpg" />
+    <Content Include="public\stylesheets\images\pic03.jpg" />
+    <Content Include="public\stylesheets\images\solidity.jpg" />
+    <Content Include="public\stylesheets\joinplan\joinplan_do.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\newplan\newplan_result.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\style\font-awesome.min.css" />
+    <Content Include="public\stylesheets\includes\left_nav_bar.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\includes\top_nav_bar.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\index.css" />
+    <Content Include="public\stylesheets\joinplan\joinplan_choose.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\login\login.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\logout\logout.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\newplan\newplan.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\register.css" />
+    <Content Include="public\stylesheets\repair\repair.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\repair\repair_result.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\repair\repair_wait.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\sign\sign.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\style\skel.css" />
+    <Content Include="public\stylesheets\style\style-large.css" />
+    <Content Include="public\stylesheets\style\style-medium.css" />
+    <Content Include="public\stylesheets\style\style-small.css" />
+    <Content Include="public\stylesheets\style\style-xlarge.css" />
+    <Content Include="public\stylesheets\style\style-xsmall.css" />
+    <Content Include="public\stylesheets\style\style.css" />
+    <Content Include="README.md" />
+    <Content Include="routes\accounting\accounting.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\accounting\transfer_token.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\joinplan\joinplan_certificate.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\currency_exchange\cash_to_tokens\confirm_cash_to_tokens.js" />
+    <Content Include="routes\currency_exchange\cash_to_tokens\receipt_cash_to_tokens.js" />
+    <Content Include="routes\currency_exchange\currency_exchange.js" />
+    <Content Include="routes\currency_exchange\tokens_to_cash\confirm_tokens_to_cash.js" />
+    <Content Include="routes\currency_exchange\tokens_to_cash\processing_tokens_to_cash.js" />
+    <Content Include="routes\currency_exchange\tokens_to_cash\receipt_tokens_to_cash.js" />
+    <Content Include="routes\erc865\erc865.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\joinplan\joinplan_choose.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\joinplan\joinplan_do.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\login\login.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\logout\logout.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\newplan\newplan.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\newplan\newplan_result.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\repair\repair.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\repair\repair_result.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\repair\repair_wait.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\sign\sign.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\accounting\accounting.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\accounting\transfer_token.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\joinplan\joinplan_certificate.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\currency_exchange\cash_to_tokens\confirm_cash_to_tokens.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\currency_exchange\cash_to_tokens\receipt_cash_to_tokens.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\currency_exchange\currency_exchange.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\currency_exchange\tokens_to_cash\confirm_tokens_to_cash.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\currency_exchange\tokens_to_cash\processing_tokens_to_cash.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\currency_exchange\tokens_to_cash\receipt_tokens_to_cash.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\erc865\erc865.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\includes\left_nav_bar.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\includes\top_nav_bar.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\index.pug" />
+    <Content Include="views\joinplan\joinplan_choose.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\joinplan\joinplan_do.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\layout.pug" />
+    <Content Include="views\error.pug" />
+    <Content Include="views\login\login.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\logout\logout.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\newplan\newplan.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\newplan\newplan_result.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\register.pug" />
+    <Content Include="views\repair\repair.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\repair\repair_result.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\repair\repair_wait.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\sign\sign.pug">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\javascripts\currency_exchange\" />
+    <Folder Include="public\javascripts\currency_exchange\cash_to_tokens\" />
+    <Folder Include="public\javascripts\currency_exchange\tokens_to_cash\" />
+    <Folder Include="public\javascripts\login\" />
+    <Folder Include="public\javascripts\logout\" />
+    <Folder Include="public\javascripts\erc865\" />
+    <Folder Include="public\javascripts\includes\" />
+    <Folder Include="public\javascripts\accounting\" />
+    <Folder Include="public\javascripts\joinplan\" />
+    <Folder Include="public\javascripts\style\" />
+    <Folder Include="public\javascripts\newplan\" />
+    <Folder Include="public\javascripts\repair\" />
+    <Folder Include="public\javascripts\sign\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="public\stylesheets\currency_exchange\" />
+    <Folder Include="public\stylesheets\currency_exchange\cash_to_tokens\" />
+    <Folder Include="public\stylesheets\currency_exchange\tokens_to_cash\" />
+    <Folder Include="public\stylesheets\fonts\" />
+    <Folder Include="public\stylesheets\images\" />
+    <Folder Include="public\stylesheets\login\" />
+    <Folder Include="public\stylesheets\logout\" />
+    <Folder Include="public\stylesheets\erc865\" />
+    <Folder Include="public\stylesheets\includes\" />
+    <Folder Include="public\stylesheets\accounting\" />
+    <Folder Include="public\stylesheets\joinplan\" />
+    <Folder Include="public\stylesheets\style\" />
+    <Folder Include="public\stylesheets\newplan\" />
+    <Folder Include="public\stylesheets\repair\" />
+    <Folder Include="public\stylesheets\sign\" />
+    <Folder Include="routes\" />
+    <Folder Include="routes\currency_exchange\" />
+    <Folder Include="routes\currency_exchange\cash_to_tokens\" />
+    <Folder Include="routes\currency_exchange\tokens_to_cash\" />
+    <Folder Include="routes\login\" />
+    <Folder Include="routes\logout\" />
+    <Folder Include="routes\erc865\" />
+    <Folder Include="routes\accounting\" />
+    <Folder Include="routes\joinplan\" />
+    <Folder Include="routes\newplan\" />
+    <Folder Include="routes\repair\" />
+    <Folder Include="routes\sign\" />
+    <Folder Include="views\" />
+    <Folder Include="views\currency_exchange\cash_to_tokens\" />
+    <Folder Include="views\currency_exchange\tokens_to_cash\" />
+    <Folder Include="views\login\" />
+    <Folder Include="views\logout\" />
+    <Folder Include="views\erc865\" />
+    <Folder Include="views\currency_exchange\" />
+    <Folder Include="views\includes\" />
+    <Folder Include="views\accounting\" />
+    <Folder Include="views\joinplan\" />
+    <Folder Include="views\newplan\" />
+    <Folder Include="views\repair\" />
+    <Folder Include="views\sign\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

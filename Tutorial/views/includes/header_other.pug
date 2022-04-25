@@ -1,0 +1,58 @@
+<header>
+    <title>Top Bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">分散式智能合約風險管理系統</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+                <li><a href="/">首頁</a></li>
+                <li><a href="/newplan/newplan">發起風險方案</a></li>
+                <li><a href="/joinplan/joinplan_choose">加入風險方案</a></li>
+                <li><a href="/joinplan/underwriting_serialnumber">核保商品</a></li>
+                <li><a href="/repair/repair">報修商品</a></li>
+                <li><a href="/plan/plan_list">風險方案列表</a></li>
+
+
+                if (!session)
+                    <li><a href="/login/login" class="button special">登入</a></li>
+                else if (session == 'owner')  
+                    <li><a href="/accounting/accounting">結算</a></li>
+                    
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">#{session}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/member/member_info">會員專區</a></li>
+                            <li><a href="#">Second</a></li>
+                            <li><a href="#">Third</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/logout/logout" class="button special">登出</a></li>
+                else
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">#{session}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/member/member_info">會員專區</a></li>
+                            <li><a href="#">Second</a></li>
+                            <li><a href="#">Third</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/logout/logout" class="button special">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>

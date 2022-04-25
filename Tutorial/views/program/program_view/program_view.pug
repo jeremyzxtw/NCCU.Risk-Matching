@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Program Upload</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    // CSS 上面 top nav bar------------------------------------------------------------- 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/top_nav_bar.css">
+    // CSS 左邊 left nav bar------------------------------------------------------------
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/left_nav_bar.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/program/program_view/program_view.css">
+
+</head>
+
+<body>
+    //--上面nav bar------------------
+    include ../../includes/top_nav_bar.pug
+    //---------------------------------------------------------------
+
+    //--左邊sidenav bar----------------------------------------------
+    include ../../includes/left_nav_bar.pug
+    //---------------------------------------------------------------
+
+    //--中間內容----------------------------------------------
+    <dic class="page_content">
+        <div class="body_head">
+            <div class="body_head_title">
+                |程式交易專區(Program Trading)
+            </div>
+        </div>
+        //中間內容
+        <div class="body_content"> 
+            //中間容器
+            <div class="container">
+                //容器左半邊
+                <div class="left_container">
+                    <a href="/program">
+                        //左側每一欄
+                        <div class="navigate_outer" id="overview">
+                            //span處理文字
+                            <span class="navigate_text">
+                                |程式合約總覽
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_upload">
+                        <div class="navigate_outer" id="upload">
+                            <span class="navigate_text">
+                                |程式碼上傳
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_view">
+                        <div class="navigate_outer" id="view">
+                            <span class="navigate_text">
+                                |程式碼瀏覽
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/deploy_contract">
+                        <div class="navigate_outer" id="deploy">
+                            <span class="navigate_text">
+                                |智能合約部署
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/contract_activation">
+                        <div class="navigate_outer" id="activate">
+                            <span class="navigate_text">
+                                |智能合約初始化
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_pause">
+                        <div class="navigate_outer" id="pause">
+                            <span class="navigate_text">
+                                |暫停智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_continue">
+                        <div class="navigate_outer" id="continue">
+                            <span class="navigate_text">
+                                |繼續智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/contract_delete">
+                        <div class="navigate_outer" id="delete">
+                            <span class="navigate_text">
+                                |終止(刪除)智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                </div>
+                //容器右半邊
+                <div class="right_container">
+                    <div class="right_container_content">
+                        //-------第一部分--------------------------------------------------------
+                        <div class="right_container_title">
+                            <h3 class="title_text">
+                                |程式碼瀏覽
+                            </h3>
+                        </div>
+                        <form id="code_area" method="post" action="">
+                            <div>
+                                <textarea id="code" name="code"></textarea>
+                            
+                                //如果有傳值,給前端抓值,這邊hidden,這邊一定要textarea不然空白換行會跑掉
+                                if(bang)
+                                    <textarea id="temporarily" name="temporarily" style="display:none">#{bang}</textarea>
+                            </div>
+                        </form>
+
+                        <div class="line">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script src="/javascripts/program/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/program/program_view/program_view.js" type="text/javascript"></script>
+    // Javascript 上面 top nav bar------------------------------------------------------------- 
+    <script src="/javascripts/includes/top_nav_bar.js" type="text/javascript"></script>
+    // Javascript 左邊 left nav bar------------------------------------------------------------
+    <script src="/javascripts/includes/left_nav_bar.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html> 

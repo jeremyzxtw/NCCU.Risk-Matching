@@ -1,0 +1,52 @@
+<header id="header" class="skel-layers-fixed">
+    <h1 style="font-size: 20pt;">分散式智能合約風險管理系統</h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="/">首頁</a></li>
+            
+            <li><a href="/newplan/newplan">發起風險方案</a></li>
+            <li><a href="/joinplan/joinplan_choose">加入風險方案</a></li>
+            <li><a href="/joinplan/underwriting_serialnumber">核保商品</a></li>
+            
+            <li><a href="/repair/repair">報修商品</a></li>
+            <li><a href="/plan/plan_list">風險方案列表</a></li>
+            <li></li><li></li>
+            if (!session)
+                <li><a href="/login/login" class="button special">登入</a></li>
+            else if (session == 'owner')  
+                <li><a href="/accounting/accounting">結算</a></li>
+                <div class="btn-group" style="margin-bottom: 5px;">
+                    <button type="button" class="btn">#{session}</button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                        <a class="dropdown-item" href="/member/member_info">會員專區</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider">
+                        </div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <li><a href="logout/logout" class="button special">登出</a></li>
+            else
+                <div class="btn-group" style="margin-bottom: 5px;">
+                    <button type="button" class="btn">#{session}</button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                        <a class="dropdown-item" href="/member/member_info">會員專區</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider">
+                        </div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <li><a href="logout/logout" class="button special">登出</a></li>
+            //登入後要改成登出
+        </ul>
+    </nav>
+</header>

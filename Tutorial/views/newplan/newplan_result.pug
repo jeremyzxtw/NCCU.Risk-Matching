@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>發起方案結果</title>
+		<link rel='stylesheet' href='/stylesheets/newplan/newplan_result.css'>
+	</head>
+	include ../includes/header_other.pug
+	<div class="contact-us">
+		<form action="" method="post">
+			<label for="Date">發起結果</label>
+			<input readonly unselectable="on" name="Result" value="#{result}" type="text" />
+			<label for="Date">開始</label><input readonly unselectable="on" name="plan_StartTime" value="#{plan_StartTime}" type="text" />
+			<label for="Date">結束</label><input readonly unselectable="on" name="plan_EndTime" value="#{plan_EndTime}" type="text" />            
+			<label for="Category">方案產品類型</label><input readonly unselectable="on" name="com_Category" value="#{com_category}" type="text" />
+			<label for="BreakReason">損壞原因</label><input readonly unselectable="on" name="how_Break" value="#{how_break}" type="text"/>
+			<label for="Hash">此方案hash</label><input readonly unselectable="on" name="Hash" value="#{hash}" type="text"/>
+			<label for="ManufactureDate">商品年限</label><input readonly unselectable="on" name="plan_ManufactureDate" value="#{plan_manufacturedate}" type="text" />
+			<input type="button" value="回首頁" onclick="location.href='/'">
+		</form>
+	</div>
+	<script src="/javascripts/newplan/newplan_result.js" type="text/javascript"></script>
+</html>

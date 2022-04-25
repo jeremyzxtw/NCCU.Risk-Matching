@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>發起方案</title>
+
+
+		<link rel='stylesheet' href='/stylesheets/newplan/newplan.css'>
+	</head>
+	<body id="top">
+		include ../includes/header_other.pug
+
+		<div class="contact-us">
+			<form action="/newplan/newplan_result" method="post">
+				<label for="Address">發起人位址</label><input readonly="readonly" name="addr_Initiater" value="#{addr_Initiater}" required="required" type="text" />
+				// <label for="Name">方案名稱<em>&#x2a;</em></label><input name="str_PlanName" required="required" type="text" />
+
+				<label for="Date">方案為期<em>&#x2a;</em></label>
+				<input type="date" name="plan_StartTime" required="required" />
+				<input type="date" name="plan_EndTime" required="required" />
+
+				<label for="Name">方案資訊<em>&#x2a;</em></label>
+				//<select name="str_PlanName" required="required" >
+					<optgroup label="資訊類">
+					<option>asus</option>
+					<option>acer</option>
+					<option>msi</option>
+				//</select>
+				<br>
+
+				<select name="com_Category" required="required" >
+					<optgroup label="產品別">
+					<option>nb</option>
+					<option>pc</option>
+					<option>gpu</option>
+				</select>
+				<br>
+
+				<label for="ManufactureDate">商品年限<em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;針對出廠日為幾號的商品？（到方案開始日）</span></label>
+				<input type="date" name="plan_ManufactureDate" required="required" />
+
+				<label for="BreakReason">損壞原因<em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;怎麼壞的？</span></label>
+				<select name="how_Break">
+					<option>human</option>
+					<option>nature</option>
+				</select>
+				<br>
+				<br>
+				// <label for="WhatHeaderSernum">限制何種序號標準？<em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;例如：'asus'_xxx</span></label><input type="text" name="header_Sernum"  required="required"  />
+				<button id="customerOrder">提交</button>
+			</form>
+		</div>
+		if (!session)
+			<script>alert("登入成功");</script>
+	</body>
+	
+	<script src="/javascripts/newplan/newplan.js" type="text/javascript"></script>
+</html>
+

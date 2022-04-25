@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>核保結果</title>
+		<link rel='stylesheet' href='/stylesheets/joinplan/joinplan_choose.css'>
+	</head>
+	<body align="center" valign="center">
+		include ../includes/header_other.pug
+		<form action="/" method="post">
+			<font size="5" color="black"><strong>核保成功，可經由下列網址查看交易紀錄</strong></font>
+			<font size="5" color="black"><strong>#{result}</strong></font>
+			<br>
+			<br>
+			<br>
+			
+			<input type="button" style="width:120px;height:40px;font-size:20px;" value="回首頁" onclick="location.href='/'">
+		</form>
+		<script src="/javascripts/joinplan/underwriting_result.js" type="text/javascript"></script>
+	</body>
+</html>

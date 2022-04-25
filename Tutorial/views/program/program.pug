@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Program Upload</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    // CSS 上面 top nav bar------------------------------------------------------------- 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/top_nav_bar.css">
+    // CSS 左邊 left nav bar------------------------------------------------------------
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/left_nav_bar.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/program/program.css">
+
+</head>
+
+<body>
+    //--上面nav bar------------------
+    include ../includes/top_nav_bar.pug
+    //---------------------------------------------------------------
+
+    //--左邊sidenav bar----------------------------------------------
+    include ../includes/left_nav_bar.pug
+    //---------------------------------------------------------------
+
+    //--中間內容----------------------------------------------
+    <dic class="page_content">
+        <div class="body_head">
+            //<img src="https://i.imgur.com/vAdNuCh.jpg" height="100px" width="200px">
+            <div class="body_head_title">
+                |程式交易專區(Program Trading)
+            </div>
+        </div>
+        //中間內容
+        <div class="body_content"> 
+            //中間容器
+            <div class="container">
+                //容器左半邊
+                <div class="left_container">
+                    <a href="/program">
+                        //左側每一欄
+                        <div class="navigate_outer" id="overview">
+                            //span處理文字
+                            <span class="navigate_text">
+                                |程式合約總覽
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_upload">
+                        <div class="navigate_outer" id="upload">
+                            <span class="navigate_text">
+                                |程式碼上傳
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_view">
+                        <div class="navigate_outer" id="view">
+                            <span class="navigate_text">
+                                |程式碼瀏覽
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/deploy_contract">
+                        <div class="navigate_outer" id="deploy">
+                            <span class="navigate_text">
+                                |智能合約部署
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/contract_activation">
+                        <div class="navigate_outer" id="activate">
+                            <span class="navigate_text">
+                                |智能合約初始化
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_pause">
+                        <div class="navigate_outer" id="pause">
+                            <span class="navigate_text">
+                                |暫停智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/program_continue">
+                        <div class="navigate_outer" id="continue">
+                            <span class="navigate_text">
+                                |繼續智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                    <a href="/program/contract_delete">
+                        <div class="navigate_outer" id="delete">
+                            <span class="navigate_text">
+                                |終止(刪除)智能合約
+                            </span>
+                        </div>
+                    </a>
+                    <div class="line">
+                    </div>
+                </div>
+                //容器右半邊
+                <div class="right_container">
+                    <div class="right_container_content">
+                        //-------第一部分--------------------------------------------------------
+                    
+                        <div class="right_container_title">
+                            <h3 class="title_text">
+                                |錢包資訊
+                            </h3>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |您的錢包地址
+                                </dd>
+                                <dd class="text_box_content" id="address">
+                                    |#{wallet_address}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |剩餘代幣數量
+                                </dd>
+                                <dd class="text_box_content" id="tokens">
+                                    |#{tokens} Tokens
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="line">
+                        </div>
+                        <div class="right_container_title">
+                            <h3 class="title_text">
+                                |您部署的投資程式合約資訊
+                            </h3>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |策略程式地址
+                                </dd>
+                                <dd class="text_box_content" id="contract_addr">
+                                    |#{program_contract_address}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |策略程式代號
+                                </dd>
+                                <dd class="text_box_content" id="transfersignature">
+                                    |#{symbol}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Active
+                                </dd>
+                                <dd class="text_box_content" id="active">
+                                    |#{active}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Hash Strategy
+                                </dd>
+                                <dd class="text_box_content" id="hash_strategy">
+                                    |#{hash_strategy}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Min Amount
+                                </dd>
+                                <dd class="text_box_content" id="min_amount">
+                                    |#{min_amount}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Max Amount 
+                                </dd>
+                                <dd class="text_box_content" id="max_amount">
+                                    |#{max_amount}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Front Variable Fee
+                                </dd>
+                                <dd class="text_box_content" id="front_var_fee">
+                                    |#{front_variable_fee} % x 投資金額
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Front Fixed Fee
+                                </dd>
+                                <dd class="text_box_content" id="front_fix_fee">
+                                    |#{front_fixed_fee}
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="text_box_title">
+                                    |Back Fee
+                                </dd>
+                                <dd class="text_box_content" id="back_fee">
+                                    |#{back_fee} % x 投資報酬率
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="line">
+                        </div>
+                        <div class="right_container_title">
+                            <h3 class="title_text">
+                                |投資資訊
+                            </h3>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |部署開始時間
+                                </dd>
+                                <dd class="text_box_content" id="to_addr">
+                                    |
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |已被注入資金
+                                </dd>
+                                <dd class="text_box_content" id="val">
+                                    |
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |投資者
+                                </dd>
+                                <dd class="text_box_content" id="to_addr">
+                                    |
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="alert" name="alert" value="#{alert}">
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="/javascripts/program/abi.js" type="text/javascript"></script>
+
+    <script src="/javascripts/program/program.js" type="text/javascript"></script>
+    // Javascript 上面 top nav bar------------------------------------------------------------- 
+    <script src="/javascripts/includes/top_nav_bar.js" type="text/javascript"></script>
+    // Javascript 左邊 left nav bar------------------------------------------------------------
+    <script src="/javascripts/includes/left_nav_bar.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html> 

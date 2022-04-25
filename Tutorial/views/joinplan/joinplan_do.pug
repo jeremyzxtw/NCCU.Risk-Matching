@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>加入結果</title>
+		<link rel='stylesheet' href='/stylesheets/joinplan/joinplan_choose.css'>
+	</head>
+	<body align="center" valign="center">
+		include ../includes/header_other.pug
+		<form action="/joinplan/joinplan_certificate" method="post">
+			<font size="5" color="black"><strong>加入結果:#{result}</strong></font>
+			<br>
+			<br>
+			if(succ_result)
+				<font size="5" color="black"><strong>#{succ_result}</strong></font>
+				<br><br>
+				<font size="8" color="black"><strong>加入方案後將回傳證明(1 ICT_token)至您的帳戶</strong></font>
+				<br><br>
+				<input type="submit" value="查看此 token 交易" class="submit" >
+				<br>
+				<br>
+		</form>
+		<script src="/javascripts/joinplan/joinplan_do.js" type="text/javascript"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,58 @@
+//--¤W­±top nav bar------------------
+<header class="nav-space">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+        <i class="fas fa-cube"></i>
+        <a class="navbar-brand font-weight-bold" href="/">
+            |Invest Block
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentXL" aria-controls="navbarSupportedContentXL" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContentXL">
+            <ul class="nav nav-tabs">                
+                <li class="nav-item" role="presentation" class="active">
+                    <a class="nav-link" href="/portfolio" role="presentation">
+                        |Portfolio
+                    </a>
+                </li>
+                if(!session)
+                    <li class="nav-item" role="presentation">
+                        <a href="/login" class="nav-link"><i class="fas fa-sign-in-alt"></i>
+                            |Login
+                        </a>
+                    </li>
+                else
+                    <li class="nav-item" role="presentation">
+                        <a href="/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i>
+                            |Logout
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">    
+                        <a href="/myaccount" class="nav-link"><i class="fa fa-fw fa-user"></i>
+                            |Member Info
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownXL" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            |User Info
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownXL">
+                            <a class="dropdown-item" href="/myaccount">
+                                |My Account
+                            </a>
+                            <a class="dropdown-item" href="/currency_exchange">
+                                |Currency Exchange
+                            </a>
+                            <a class="dropdown-item" href="/program">
+                                |Program
+                            </a>
+                            <a class="dropdown-item" href="/investor">
+                                |Investor
+                            </a>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+//---------------------------------------------------------------

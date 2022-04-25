@@ -1,0 +1,5 @@
+com_sernum	com_name	warranty_time	sold_time	com_status	if_rma	rma_time
+2312312312	battery	3year	2020-09-01	return	yes	2020-09-26
+zxc123	car	3year	2020-09-01	working	no	NULL
+zxc1234	phone	3year	2020-09-01	inrepair	no	NULL
+zxc123456	notebook	3year	2020-09-01	return	no	NULL

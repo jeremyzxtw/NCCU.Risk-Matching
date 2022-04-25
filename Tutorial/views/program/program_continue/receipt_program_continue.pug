@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Continue Receipt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    // CSS 上面 top nav bar------------------------------------------------------------- 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/top_nav_bar.css">
+    // CSS 左邊 left nav bar------------------------------------------------------------
+    <link rel="stylesheet" type="text/css" href="/stylesheets/includes/left_nav_bar.css">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/program/program_continue/receipt_program_continue.css">
+
+</head>
+<body>
+
+    //--上面nav bar--------------------------------------------------
+    include ../../includes/top_nav_bar.pug
+
+    //--左邊sidenav bar----------------------------------------------
+    include ../../includes/left_nav_bar.pug
+
+    //--中間內容------------------------------------------------
+    <div class="page_content">
+        <div class="body_head">
+            <div class="body_head_title">
+                |程式交易專區(Program Trading)
+            </div>
+        </div>
+        //中間內容
+        <div class="body_content"> 
+            //中間容器
+            <div class="container">
+                //容器左半邊
+                <div class="container_head">
+                    <h1>
+                        |Program Continue Receipt
+                    </h1>
+                </div>
+
+                <div class="box_content">
+                    <div class="address_info">
+                        <div class="container_title">
+                            <h3 class="title_text">
+                                |繼續合約明細
+                            </h3>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |繼續日期
+                                </dd>
+                                <dd class="text_box_content" id="date">
+                                    |#{date}
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |交易型態
+                                </dd>
+                                <dd class="text_box_content" id="type">
+                                    |Program Continue
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |手續費
+                                </dd>
+                                <dd class="text_box_content" id="total_exchange">
+                                    |#{total_exchange} Tokens
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |交易結果
+                                </dd>
+                                <dd class="text_box_content" id="result">
+                                    |#{result}
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |此次交易Hash
+                                </dd>
+                                <dd class="text_box_content" id="hash">
+                                    |#{tx_hash}
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |此次交易可至以下網址查看
+                                </dd>
+                                <dd class="text_box_content" id="tx_page">
+                                    <a href="#{tx_page}" target="_blank">#{tx_page}</a>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                    
+                    <div class="line">
+                    </div>
+                    <input type="submit" value="返回" id="back" onclick="redirect();">
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    // Javascript 上面 top nav bar------------------------------------------------------------- 
+    <script src="/javascripts/includes/top_nav_bar.js" type="text/javascript"></script>
+    // Javascript 左邊 left nav bar------------------------------------------------------------
+    <script src="/javascripts/includes/left_nav_bar.js" type="text/javascript"></script>
+
+    <script src="/javascripts/program/program_continue/receipt_program_continue.js" type="text/javascript"></script>
+
+    //---------------------------------------------------------------
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>

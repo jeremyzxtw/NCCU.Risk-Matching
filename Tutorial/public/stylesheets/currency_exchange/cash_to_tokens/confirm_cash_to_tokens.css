@@ -1,0 +1,143 @@
+body {
+    transition: background-color .5s; /*背景顏色變色速度*/
+    overflow: auto;
+    margin: 0;
+    background-color: gainsboro;
+}
+
+    body a {
+        text-decoration: none; /*取消全體超連結之底線*/
+    }
+
+.page_content {
+    font-family: Simhei,Arial, Helvetica, sans-serif;
+}
+
+/* ----------中間內容---------------------------------------------------------- */
+.body_head {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: burlywood;
+    z-index: 2;
+    background: url(https://i.imgur.com/h2bUdnf.jpg) no-repeat;
+    background-size: cover;
+}
+
+.body_head_title {
+    font-size: 30px;
+    color: white;
+    padding-top: 140px;
+    padding-left: 300px;
+    font-weight: bold;
+}
+
+.body_content {
+    position: relative; /*relative才會出現卷軸   fixed 跟 absolute會跳脫空間*/
+    width: 100%;
+    height: auto;
+    top: 52px; /*設置離上面高度*/
+    z-index: 1; /*第1層*/
+    padding: 20px 0px;
+}
+
+.container {
+    background-color: #ececec;
+    width: 955px;
+    height: 100%;
+    margin: 0px auto;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 6px #333;
+    margin-bottom: 24px;
+    padding: 0px;
+}
+
+.container_head {
+    width: auto;
+    height: 75px;
+    background-color: #4CAF50;
+}
+
+    .container_head h1 {
+        color: white;
+        text-align: center;
+        margin: 19px 0px 19px 0px;
+    }
+
+.box_content {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 30px 50px 20px;
+}
+
+.address_info {
+    height: 250px;
+    width: auto;
+}
+
+.container_title {
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: auto;
+    height: 20px;
+}
+
+.title_text {
+    font-size: 22px;
+    color: #444444;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.text_box {
+    background-color: #eeeeee;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+    .text_box dl {
+        margin-bottom: 40px;
+        margin-top: 0px;
+        height: 18.2px;
+    }
+
+        .text_box dl dd.text_box_title {
+            font-weight: bold;
+            width: 300px;
+            margin-left: 0px;
+            margin-right: 5px;
+            font-size: 17px;
+            color: #555555;
+            display: inline-block;
+        }
+
+        .text_box dl dd.text_box_content {
+            width: auto;
+            margin-left: 0px;
+            margin-right: 5px;
+            font-size: 17px;
+            color: #555555;
+            display: inline;
+        }
+
+.line {
+    height: 0px;
+    border-top: 1px #c2c2c2 solid;
+    border-bottom: 1px #fff solid;
+    clear: both;
+}
+
+#confirm_submit {
+    position: relative;
+    left: 300px;
+}
+
+#hidden_tag {
+    display: none;
+}

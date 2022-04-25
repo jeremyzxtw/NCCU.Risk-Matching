@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>會員專區</title>
+    </head>
+    <body>
+        //--上面nav bar--------------------------------------------------
+        include ../includes/header_other.pug
+        //--中間內容------------------------------------------------
+        <div class="page_content">
+        <div class="body_head">
+        </div>
+        //中間內容
+        <div class="body_content">
+            //中間容器
+            <div class="container">
+                //容器左半邊
+                <div class="container_head">
+                    <h1>
+                        |會員專區
+                    </h1>
+                </div>
+                <div class="box_content">
+                    <div class="address_info">
+                        <div class="container_title">
+                            <h3 class="title_text">
+                                |電子錢包資料
+                            </h3>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |您的錢包地址
+                                </dd>
+                                <dd class="text_box_content" id="user_wallet_address">
+                                    |#{user_wallet_address}
+                                </dd>
+                                <dd class="text_box_content" id="warn_invalid_address">
+                                    |#{warn_invalid_address}
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="text_box">
+                            <dl>
+                                <dd class="text_box_title">
+                                    |您擁有的平台Token數量
+                                </dd>
+                                <dd class="text_box_content" id="user_wallet_tokens">
+                                    |#{tokens} ICT_Tokens
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    
+                    <div class="payment">
+                        <div class="container_title">
+                            <h3 class="title_text">
+                                |已結算方案
+                            </h3>
+                        </div>
+                        if(com_sernum)
+                            <form id="transfer_tokens" action="/" method="post">
+                                <div class="text_box">
+                                    <dl>
+                                        <dd class="text_box_title">
+                                            |Tokens to Owner
+                                        </dd>
+                                        <dd class="text_box_content" id="box_cash_to_tokens">
+                                            //只能輸入正整數
+                                            |#{com_sernum}<br>
+                                            |須負擔金額：
+                                            <input id="Insured_Token" name="Insured_Token"  type="text" readonly unselectable="on" value = '#{user_status}' />
+                                        </dd>
+                                        <br>
+                                        <input type="submit" value="結算" id="insure_token">
+                                    </dl>
+                                </div>
+                            </form>
+                            if (user_status != 'off' || tokens >=100)
+                                <div class="exchange">
+                                    <div class="container_title">
+                                        <h3 class="title_text">
+                                            |兌換 & 兌現
+                                        </h3>
+                                    </div>
+                                    <form id="form_cash_to_tokens" action="/currency_exchange/cash_to_tokens/confirm_cash_to_tokens" method="post">
+                                        <div class="text_box">
+                                            <dl>
+                                                <dd class="text_box_title">
+                                                    |NTD to Tokens
+                                                </dd>
+                                                <dd class="text_box_content" id="box_cash_to_tokens">
+                                                    //只能輸入正整數
+                                                    <input id="cash_to_tokens" name="cash_to_tokens" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                </dd>
+                                                <br>
+                                                <input type="submit" value="Exchange" id="submit_cash_to_tokens">
+                                            </dl>
+                                        </div>
+                                    </form>
+                                    <form id="form_tokens_to_cash" action="/currency_exchange/tokens_to_cash/confirm_tokens_to_cash" method="post">
+                                        <div class="text_box">
+                                            <dl>
+                                                <dd class="text_box_title">
+                                                    |Tokens to NTD
+                                                </dd>
+                                                <dd class="text_box_content" id="box_tokens_to_cash">
+                                                    //只能輸入正整數
+                                                    <input id="tokens_to_cash" name="tokens_to_cash" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                                                </dd>
+                                                <br>
+                                                <input type="submit" value="Exchange" id="submit_tokens_to_cash">
+                                            </dl>
+                                        </div>
+                                    </form>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        if (status)
+        <script>alert("您有款項尚未繳交");</script>
+    </body>
+    <script src="/javascripts/joinplan/joinplan_do.js" type="text/javascript"></script>
+    <script src="/javascripts/program/abi.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web.js@1.0.0-beta.36/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+</html>

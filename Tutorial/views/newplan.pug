@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>發起方案</title>
+    <link rel='stylesheet' href='/stylesheets/newplan.css'>
+  </head>
+  <body align="center" valign="center">
+    <h1>
+        |發起方案
+    </h1>
+    <form action="" method="post">
+       <p>發起人位址：<input type="text" id="addrinitiater" name="addr_Initiater" value="0x9B292EDfac1A8d408aC7482A961578536354eecB"></p>
+       <p>方案名稱：<input type="text" id="strplanname" name="str_PlanName" value="test"></p>
+       <p>方案期間：<input type="date" id="planstarttime" name="plan_StartTime"> 至 <input type="date" id="planendtime" name="plan_EndTime"></p>
+       <p>賠償金額：<input type="text" id="planprice" name="plan_Price" value=100></p>
+       <p>商品種類：
+       <select name="com_category">
+       <option value="electronic">電子</option>
+       <option value="car">汽車</option>
+       </select>
+       </p>
+
+       <p>如何損壞：
+       <select name="how_break">
+       <option value="human">人為損壞</option>
+       <option value="natural">自然損壞</option>
+       </select>
+       </p>
+
+       <input type="submit">
+    </form>
+    <p>
+        |#{hash}
+    </p>
+
+    <p>
+        |#{addr_Initiater}
+    </p>
+
+    <p>
+        |#{str_PlanName}
+    </p>
+
+    <p>
+        |#{plan_StartTime}
+    </p>
+
+    <p>
+        |#{plan_EndTime}
+    </p>
+
+    <p>
+        |#{plan_Price}
+    </p>
+
+    <p>
+        |#{com_category}
+    </p>
+
+    <p>
+        |#{how_break}
+    </p>
+
+
+    <script src="/javascripts/newplan.js" type="text/javascript"></script>
+  </body>
+</html>

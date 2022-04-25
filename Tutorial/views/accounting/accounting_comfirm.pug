@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>結算確認</title>
+		
+		<link rel='stylesheet' href='/stylesheets/accounting/transfer_token.css'>
+	</head>
+	<body align="center" valign="center" >
+		include ../includes/header_other.pug
+		<font size="8" color="black"><strong>結算方案資訊</strong></font>
+		<br><br>
+		<form action='' method="post">
+			<div id="div1" style="display:block">
+				|出險人數：#{num_Of_repair}<br>
+				if(id_Of_repair1)
+					|出險人ID：<input type="text" id ="Insured_ID1" name="Insured_ID1" size="10" value='#{id_Of_repair1}' />
+					|出險商品：<input type="text" id ="Insured_ID1" name="Insured_ID1" size="20" value='#{sernum_Of_repair1}' />
+					|出險價格：
+					<input type="text" id ="Insured_Token1" name="Insured_Token1" size="10" value='#{price_Of_repair1}'/>   <button id="insure_token1">送出 token</button><br>
+				if(id_Of_repair2)
+					|出險人ID：<input type="text" id ="Insured_ID2" name="Insured_ID2" size="10" value='#{id_Of_repair2}' />
+					|出險商品：<input type="text" id ="Insured_ID2" name="Insured_ID2" size="20" value='#{sernum_Of_repair2}' />
+					|出險價格：
+					<input type="text" id ="Insured_Token2" name="Insured_Token2" size="10" value='#{price_Of_repair2}' />   <button id="insure_token2">送出 token</button><br>
+				if(id_Of_repair3)
+					|出險人ID：<input type="text" id ="Insured_ID3" name="Insured_ID3" size="10" value='#{id_Of_repair3}' />
+					|出險商品：<input type="text" id ="Insured_ID3" name="Insured_ID3" size="20" value='#{sernum_Of_repair3}' />
+					|出險價格：
+					<input type="text" id ="Insured_Token3" name="Insured_Token3" size="10" value='#{price_Of_repair3}'/>   <button id="insure_token3">送出 token</button><br>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div id="div2" style="display:block">
+				|未出險人數：#{num_Of_UNrepair}<br>
+				if(id_Of_UNrepair1)
+					|未出險人ID：#{id_Of_UNrepair1}
+					|未出險商品：#{sernum_Of_UNrepair1}
+					|須負擔價格：#{price_Of_UNrepair1}<br>
+					
+				if(id_Of_UNrepair2)
+					|未出險人ID：#{id_Of_UNrepair2}
+					|未出險商品：#{sernum_Of_UNrepair2}
+					|須負擔價格：#{price_Of_UNrepair2}<br>
+				if(id_Of_UNrepair3)
+					|未出險人ID：#{id_Of_UNrepair3}
+					|未出險商品：#{sernum_Of_UNrepair3}
+					|須負擔價格：#{price_Of_UNrepair3}<br>
+
+			</div>
+			<input type="button" style="width:120px;height:40px;font-size:20px;" value="回首頁" onclick="location.href='/'">
+		</form>
+		<script src="/javascripts/accounting/accounting_comfirm.js" type="text/javascript"></script>
+		<script src="/javascripts/program/abi.js" type="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/gh/ethereum/web.js@1.0.0-beta.36/dist/web3.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+	</body>
+</html>
